@@ -1,0 +1,14 @@
+/*
+ * Copyright (C) 2015 Freescale Semiconductor, Inc.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 as
+ * published by the Free Software Foundation.
+ */
+
+/*
+ * NOTE: This is a private DTS file for supporting brcmfmac with in-band interrupt.
+ */
+
+#include "imx6ul-14x14-evk.dts"
+#include "imx6ul-evk-btwifi-cnhu-fmac.dtsi"
