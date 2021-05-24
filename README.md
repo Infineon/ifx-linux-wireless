@@ -34,27 +34,6 @@ module they have selected. This would include but is not limited to the
 following: NVRAM, clm_blob and MFG Binaries.
 
 
-
-Supported Features
-------------------
-| Feature            | 43455 | 4373SDIO | 4373USB | 43012 | 4356PCIe | 4354 | 43362 | 4343w | 43340 | 4339 | 43570PCIe | 54591PCIe |
-|--------------------|:-----:|:--------:|:-------:|:-----:|:--------:|:----:|:-----:|:-----:|:-----:|:----:|:---------:|:---------:|
-| SoftAP             |   O   |     O    |    O    |   O   |     O    |   O  |   O   |   O   |   O   |   O  |     O     |     O     |
-| APSTA              |   O   |          |         |       |          |      |       |       |       |      |     O     |     O     |
-| P2P                |   O   |     O    |    O    |   O   |     O    |   O  |   O   |   O   |   O   |   O  |     O     |     O     |
-| WoWL               |   O   |          |         |       |          |      |       |       |       |      |           |           |
-| Voice Enterprise   |   O   |          |         |       |          |      |       |       |       |      |           |           |
-| OKC                |   O   |          |         |       |          |      |       |       |       |      |           |           |
-| WPA3-STA           |   O   |     O    |    O    |   O   |          |      |       |       |       |      |           |           |
-| WPA3-AP            |   O   |     O    |    O    |       |          |      |       |       |       |      |           |           |
-| Fast Roaming       |   O   |          |         |   O   |          |      |       |       |       |      |           |           |
-| Thermal Throttling |   O   |          |         |       |          |      |       |   O   |       |      |           |           |
-| CYNC               |       |          |         |       |          |      |       |       |       |      |           |     O     |
-| DPP                |   O   |          |         |   O   |          |      |       |       |       |      |           |     O     |
-| VSDB               |       |     O    |    O    |       |          |      |       |       |       |      |           |           |
-
-
-
 Instructions
 ------------
 The WiFi driver is developed based on Linux v5.4.18. Older kernels need
@@ -179,8 +158,9 @@ Note: More on fmac driver [firmware/nvram install](https://wireless.wiki.kernel.
 
 Instructions - Hostap
 ---------------------
-The patch files in this package are based on Hostap v2.9. Below is an example
-of how to apply these files and build hostapd/wpa_supplicant binaries.
+Hostpad/wpa_supplicant is the standard application for controlling WiFi devices.
+Below is an example of cloning the Infineon GitHub repo and building
+hostapd/wpa_supplicant binaries.
 
 ### Build the hostapd/wpa_supplicant binaries
 ```bash
@@ -211,8 +191,8 @@ Test Environment
 ----------------
 * ARM (MCIMX6SX-SDB)
    * Linux v4.14.78 (NXP imx_4.14.78_1.0.0_ga)
-   * Backports driver package
+   * Backports driver
 * x86
    * Linux v4.12
-   * Backports driver package
+   * Backports driver
 

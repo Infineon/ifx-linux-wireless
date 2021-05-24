@@ -3,12 +3,12 @@ Infineon WiFi Linux WiFi Solution - Release Notes
 
 Release Version
 ---------------
-v5.4.18-2021_0114
+v5.4.18-2021_0527
 
 
 Release Date
 ------------
-2021-01-21
+2021-05-27
 
 
 WiFi Driver Change List
@@ -151,6 +151,17 @@ WiFi Driver Change List
 1. brcmfmac: Remove the call to "dtim_assoc" IOVAR
 1. brcmfmac: fix CERT-P2P:5.1.10 failure
 1. brcmfmac: Fix for when connect request is not success
+1. brcmfmac: Avoiding Connection delay
+1. non-upstream: Revert "brcm80211: select WANT_DEV_COREDUMP conditionally for brcmfmac"
+1. brcmfmac: Fix connecting enterprise AP failure
+1. brcmfmac: Fix for skbuf allocation failure in memory limited system
+1. brcmfmac: Update SSID of hidden AP while informing its bss to cfg80211 layer
+1. brcmfmac: Fix PCIE suspend/resume issue
+1. brcmfmac: disable mpc when power_save is disabled
+1. brcmfmac: Fix authentication latency caused by OBSS stats survey
+1. brcmfmac: support external SAE authentication in station mode
+1. brcmfmac: fix sdio watchdog timer start fail issue
+1. brcmfmac: Frameburst vendor command addition
 
       [-] means under upstream review
       [x] means no plan to upstream
@@ -173,8 +184,8 @@ Change areas mapping (refer to the above sequence numbers)
 * 89359 (0015-0018, 0028, 0033, 0047, 0053, 0063, 0066-0067, 111)
 * Miracast (0020)
 * 4339 (0021, 0097)
-* Power saving (0029, 0045, 0057)
-* SDIO (0031, 0083, 115, 125)
+* Power saving (0029, 0045, 0057, 144-145)
+* SDIO (0031, 0083, 115, 125, 148)
 * Firmware interface (0036, 0039, 0068, 113, 131)
 * 4356 (0037, 0069)
 * PCIe (0044, 0058, 0064, 0099-0100, 116-117)
@@ -184,19 +195,18 @@ Change areas mapping (refer to the above sequence numbers)
 * 43570 (0054)
 * GTK rekey (0055)
 * 54591 (0059, 0086, 122)
-* Generic bugs (0060, 0061, 0091, 104-107, 114, 118-119, 135-136, 138)
-* WPA3 (0062, 0077-0080, 0084)
+* Generic bugs (0060, 0061, 0091, 104-107, 114, 118-119, 135-136, 138-140, 142-143)
+* WPA3 (0062, 0077-0080, 0084, 147)
 * 4354 (0065)
 * OKC (0076)
-* DPP (108, 124)
+* DPP (108, 124, 141)
 * Firmware naming (109)
 * Monitor mode (110)
 * Debug capability (120, 127)
-* Manufacturing (121)
+* Manufacturing (121, 149)
 * Auto channel selection (126)
-* OBSS (132)
+* OBSS (132, 146)
 * RSDB (133-134)
-
 
 
 Hostap Change List
