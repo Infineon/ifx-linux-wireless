@@ -36,9 +36,9 @@ following: NVRAM, clm_blob and MFG Binaries.
 
 Instructions
 ------------
-The WiFi driver is developed based on Linux v5.4.18. Older kernels need
+The WiFi driver is developed based on Linux v5.10.9. Older kernels need
 use backports package. Below are examples of how to use this package
-with an older kernel or linux-stable v5.4.18.
+with an older kernel or linux-stable v5.10.9.
 
 ### Using backports with an older kernel (v3.10+)
 
@@ -72,8 +72,8 @@ Below is the example of using with iMX Linux v4.14.78:
 #### Build the WiFi driver/backports modules
 ```bash
 #1. Download the backports package
-    git clone -b latest-v5.4 https://github.com/cypresssemiconductorco/ifx-backports.git
-    cd ifx-backports/v5.4.18-backports
+    git clone -b latest-v5.10 https://github.com/cypresssemiconductorco/ifx-backports.git
+    cd ifx-backports/v5.10.9-backports
 #2. (Native) compile local tools and generate .config (in a new terminal
 #   without sourcing Yoctol toolchain settings)
     bash
@@ -92,7 +92,7 @@ Below is the example of using with iMX Linux v4.14.78:
 #### Device tree
 ```bash
 #1. Download Infineon devicetree package
-    git clone -b latest-v5.4 https://github.com/cypresssemiconductorco/ifx-linux-wireless.git
+    git clone -b latest-v5.10 https://github.com/cypresssemiconductorco/ifx-linux-wireless.git
 #2. Find your board's dtb file, for example
 #      ifx-linux-wireless/devicetree/iMX6SX/4.14.78/imx6sx-sdb-btwifi-fmac.dtb
 ```
@@ -113,7 +113,7 @@ Note: If your board's dtb is not available in the cypress devicetree
     scp <dtb file> root@$TARGET_IP:/run/media/mmcblk1p1/cy.dtb
     scp <zImage file> root@$TARGET_IP:/run/media/mmcblk1p1/zImage_cy
 #2. Copy firmware files to the target board
-    git clone -b latest-v5.4 https://github.com/cypresssemiconductorco/ifx-linux-firmware.git
+    git clone -b latest-v5.10 https://github.com/cypresssemiconductorco/ifx-linux-firmware.git
     scp ifx-linux-firmware/firmware/* root@$TARGET_IP:/lib/firmware/cypress
 #3. Copy your nvram file (from board vendor) to the target board and rename it
     scp <nvram file> root@$TARGET_IP:/lib/firmware/cypress/<fw name>.txt
@@ -136,10 +136,11 @@ Note: If your board's dtb is not available in the cypress devicetree
 ```
 Note: More on fmac driver [firmware/nvram install](https://wireless.wiki.kernel.org/en/users/drivers/brcm80211#firmware_installation1)
 
-### Using Linux Stable v5.4.18
+### Using Linux Stable v5.10.9
 ```bash
 #1. Download Linux kernel source
-    git clone -b latest-v5.4 https://github.com/cypresssemiconductorco/ifx-wireless-drivers.git
+    wget https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/snapshot/linux-5.10.9.tar.gz
+    tar zxvf linux-5.10.9.tar.gz
 #2. Set kernel .config and enable below options, then compile kernel image
 #      CONFIG_BRCMUTIL=y
 #      CONFIG_BRCMFMAC=y
@@ -150,7 +151,7 @@ Note: More on fmac driver [firmware/nvram install](https://wireless.wiki.kernel.
 #3. (optional) Backup original firmware files
     cp /lib/firmware/cypress /lib/firmware/cypress-bak -r
 #4. Update firmware files in /lib/firmware/cypress
-    git clone -b latest-v5.4 https://github.com/cypresssemiconductorco/ifx-linux-firmware.git
+    git clone -b latest-v5.10 https://github.com/cypresssemiconductorco/ifx-linux-firmware.git
     cp ifx-linux-firmware/firmware/* /lib/firmware/cypress
 #5. Boot the system with the new kernel image
 ```
@@ -179,10 +180,10 @@ hostapd/wpa_supplicant binaries.
     make clean
     make
 #4. The binaries are available here
-#     hostap_2_9/hostapd/hostapd
-#     hostap_2_9/hostapd/hostapd_cli
-#     hostap_2_9/wpa_supplicant/wpa_supplicant
-#     hostap_2_9/wpa_supplicant/wpa_cli
+#     hostap/hostapd/hostapd
+#     hostap/hostapd/hostapd_cli
+#     hostap/wpa_supplicant/wpa_supplicant
+#     hostap/wpa_supplicant/wpa_cli
 ```
 Note: Set CONFIG_SAE=y in .config to enable WPA3-Personal (SAE) support.
 
