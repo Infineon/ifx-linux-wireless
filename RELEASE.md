@@ -3,12 +3,12 @@ Infineon WiFi Linux WiFi Solution - Release Notes
 
 Release Version
 ---------------
-v5.4.18-2021_0527
+v5.10.9-2022_0321
 
 
 Release Date
 ------------
-2021-05-27
+2022-03-31
 
 
 WiFi Driver Change List
