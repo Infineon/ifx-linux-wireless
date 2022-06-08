@@ -3,12 +3,12 @@ Infineon WiFi Linux WiFi Solution - Release Notes
 
 Release Version
 ---------------
-v5.10.9-2022_0321
+v5.10.9-2022_0511
 
 
 Release Date
 ------------
-2022-03-31
+2022-05-11
 
 
 WiFi Driver Change List
@@ -162,6 +162,43 @@ WiFi Driver Change List
 1. brcmfmac: support external SAE authentication in station mode
 1. brcmfmac: fix sdio watchdog timer start fail issue
 1. brcmfmac: Frameburst vendor command addition
+1. brcmfmac-add-support-for-CYW43439-SDIO-chipset
+1. brcmfmac-add-BT-shared-SDIO-support
+1. brcmfmac-add-CYW43439-SR-related-changes
+1. brcmfmac-add-support-for-CYW43439-with-blank-OTP
+1. brcmfmac-support-43439-Cypress-Vendor-and-Device-ID
+1. brcmfmac-fix-P2P-device-discovery-failure
+1. brcmfmac-Add-SDIO-verdor-device-id-for-CYW89459-in-h
+1. brcmfmac-Add-CYW89459-HW-ID-and-modify-sdio-F2-block
+1. brcmfmac-Fix-AP-interface-delete-issue
+1. brcmfmac-Revise-channel-info-for-WPA3-external-SAE
+1. brcmfmac-Fix-structure-size-for-WPA3-external-SAE
+1. brcmfmac-support-54590-54594-PCIe-device-id
+1. Revert-non-upstream-make-setting-SDIO-workqueue-WQ_H
+1. brcmfmac-revise-SoftAP-channel-setting
+1. cfg80211-make-certificate-generation-more-robust
+1. brcmfmac-Optimize-CYW4373-SDIO-current
+1. brcmfmac-use-request_firmware_direct-for-loading-boa
+1. brcmfmac-enable-pmk-catching-for-ext-sae-wpa3-ap
+1. brcmfmac-fixes-CYW4373-SDIO-CMD53-error
+1. brcmfmac-add-PCIe-mailbox-support-for-core-revision-
+1. brcmfmac-add-support-for-TRX-firmware-download
+1. brcmfmac-add-Cypress-PCIe-vendor-ID
+1. brcmfmac-add-support-for-CYW55560-PCIe-chipset
+1. brcmfmac-add-bootloader-console-buffer-support-for-P
+1. brcmfmac-support-4373-pcie
+1. brcmfmac-extsae-supports-FT-over-SAE
+1. brcmfmac-extsae-supports-SAE-OKC-roam
+1. nl80211-add-roaming-offload-support
+1. brcm80211-add-FT-11r-OKC-roaming-offload-support
+1. brcmfmac-support-extsae-with-psk-1x-offloading
+1. brcmfmac-disable-out-of-band-device-wake-based-DeepS
+1. brcmfmac-Improve-the-delay-during-scan
+1. non-upstream-skip-6G-oob-scan-report
+1. brcmfmac-add-FW-AP-selection-mod-param
+1. brcmfmac-changing-info-messages-under-debug-BRCMF_IN
+1. brcmfmac-remove-default-2s-power-save-max-timeout
+1. brcmfmac-fixes-scan-invalid-channel-when-enable-host
 
       [-] means under upstream review
       [x] means no plan to upstream
@@ -229,6 +266,18 @@ Hostap Change List
 1. DPP: Do more condition test for AKM type DPP offload.
 1. hostapd: Fix PMF connection issue
 1. AP: Set Authenticator state properly for PSK 4-way handshake offload
+1. non-upstream:defconfig_base-Add-Infineon-default-configuration
+1. P2P:Fix-copying-of-secondary-device-types-for-P2P-group-client
+1. P2P:Fix-a-corner-case-in-peer-addition-based-on-PD-Request
+1. wpa_supplicant:Add-CONFIG_WPA3_SAE_AUTH_EARLY_SET-flags
+1. nl80211:Set-the-right-WPA-Versions-for-FT-SAE-key-manage
+1. wpa_supplicant:Support-WPA_KEY_MGMT_FT-for-eapol-offloading
+1. wpa_supplicant:Suppress-deauth-for-PMKSA-caching-disabled
+1. wpa_supplicant:Fix-to-check-Invalid-GTK-IE-length-in-M3-at-STA
+1. AP:SAE-Fix-for-PMK-expiration-issue-through-supplicant
+1. wpa_supplicant:SAE-Drop-PMKSA-cache-after-receiving-specific-deauth
+1. AP:Deauthenticate-STA-only-if-PMK-expired
+
 
 Note: [*] is the upstream tag containing the patch
       [x] means no plan to upstream
