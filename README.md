@@ -71,9 +71,9 @@ Below is the example of using with iMX Linux v4.14.78:
 
 #### Build the WiFi driver/backports modules
 ```bash
-#1. Download the backports package
-    git clone -b latest-v5.10 https://github.com/cypresssemiconductorco/ifx-backports.git
-    cd ifx-backports/v5.10.9-backports
+#1. Untar the Cypress backports package
+    tar zxvf cypress-backports-*.tar.gz
+    cd v5.15.58-backports
 #2. (Native) compile local tools and generate .config (in a new terminal
 #   without sourcing Yoctol toolchain settings)
     bash
@@ -136,24 +136,28 @@ Note: If your board's dtb is not available in the cypress devicetree
 ```
 Note: More on fmac driver [firmware/nvram install](https://wireless.wiki.kernel.org/en/users/drivers/brcm80211#firmware_installation1)
 
-### Using Linux Stable v5.10.9
+### Using Linux Stable v5.15.58
 ```bash
-#1. Download Linux kernel source
-    wget https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/snapshot/linux-5.10.9.tar.gz
-    tar zxvf linux-5.10.9.tar.gz
-#2. Set kernel .config and enable below options, then compile kernel image
+#1. Download Linux stable kernel source
+    wget https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/snapshot/linux-5.15.58.tar.gz
+    tar zxvf linux-5.15.58.tar.gz
+#2. In Linux root folder, untar/apply cypress patches with below bash commands
+    cd linux-5.15.58
+    tar zxvf cypress-patch*.tar.gz
+    for i in cypress-patch/*.patch; do patch -p1 < $i; done
+#3. Set kernel .config and enable below options, then compile kernel image
 #      CONFIG_BRCMUTIL=y
 #      CONFIG_BRCMFMAC=y
 #      CONFIG_BRCMFMAC_SDIO=y
 #      CONFIG_BRCMFMAC_PROTO_BCDC=y
 #      CONFIG_BRCMFMAC_PCIE=y
 #      CONFIG_BRCMFMAC_PROTO_MSGBUF=y
-#3. (optional) Backup original firmware files
+#4. (optional) Backup original firmware files
     cp /lib/firmware/cypress /lib/firmware/cypress-bak -r
-#4. Update firmware files in /lib/firmware/cypress
-    git clone -b latest-v5.10 https://github.com/cypresssemiconductorco/ifx-linux-firmware.git
-    cp ifx-linux-firmware/firmware/* /lib/firmware/cypress
-#5. Boot the system with the new kernel image
+#5. Update firmware files in /lib/firmware/cypress
+    tar zxvf cypress-firmware*.tar.gz
+    cp firmware/* /lib/firmware/cypress
+#6. Boot the system with the new kernel image
 ```
 
 
@@ -165,27 +169,33 @@ hostapd/wpa_supplicant binaries.
 
 ### Build the hostapd/wpa_supplicant binaries
 ```bash
-#1. Download Hostap source
-    git clone -b latest-2_9 https://github.com/cypresssemiconductorco/ifx-hostap.git
-#2. (Hostapd) in hostapd root directory, set up the build configuration file,
+#1. Download Hostap source and change the HEAD to commit cff80b4f7d3c
+    git clone git://w1.fi/hostap.git
+    cd hostap
+    git checkout cff80b4f7d3c
+#2. In Hostap root folder, untar/apply cypress patches with below bash commands
+    tar zxvf cypress-hostap_2_10-*.tar.gz
+    for i in cypress-hostap_2_10/*.patch; do patch -p1 < $i; done
+#3. (Hostapd) in hostapd root directory, have a build time configuration file,
 #   .config, and build hostapd and hostapd_cli
-    cd ifx-hostap/hostapd
-    cp defconfig .config
+    cd hostapd
+    cp defconfig_base .config
     make clean
     make
-#3. (Wpa_supplicant) in wpa_supplicant root directory, set up the build configuration
-#   file, .config, and build wpa_supplicant and wpa_cli
-    cd ../wpa_supplicant
-    cp defconfig .config
+#4. (Wpa_supplicant) in wpa_supplicant root directory, have a build time
+#   configuration file, .config, and build wpa_supplicant and wpa_cli
+    cd wpa_supplicant
+    cp defconfig_base .config
     make clean
     make
-#4. The binaries are available here
+#5. The binaries are available here
 #     hostap/hostapd/hostapd
 #     hostap/hostapd/hostapd_cli
 #     hostap/wpa_supplicant/wpa_supplicant
 #     hostap/wpa_supplicant/wpa_cli
 ```
 Note: Set CONFIG_SAE=y in .config to enable WPA3-Personal (SAE) support.
+      5459x and 43012 only supports sae_pwe 1 or 2 in hostapd.conf and wpa_supplicant.conf
 
 
 Test Environment
@@ -194,6 +204,6 @@ Test Environment
    * Linux v4.14.78 (NXP imx_4.14.78_1.0.0_ga)
    * Backports driver
 * x86
-   * Linux v4.12
+   * Linux v5.4
    * Backports driver
 
