@@ -3,12 +3,11 @@ Infineon WiFi Linux WiFi Solution - Release Notes
 
 Release Version
 ---------------
-v5.10.9-2022_0909
-
+v5.15.58-2023_0222
 
 Release Date
 ------------
-2022-09-09
+2023-02-22
 
 
 WiFi Driver Change List
@@ -108,7 +107,6 @@ WiFi Driver Change List
 1. Revert-non-upstream-make-setting-SDIO-workqueue-WQ_H.patch[x]
 1. brcmfmac-Set-SDIO-workqueue-as-WQ_HIGHPRI.patch[v5.15-rc1]
 1. brcmfmac-revise-SoftAP-channel-setting.patch
-1. cfg80211-make-certificate-generation-more-robust.patch[v5.13-rc7]
 1. brcmfmac-Optimize-CYW4373-SDIO-current.patch
 1. brcmfmac-use-request_firmware_direct-for-loading-boa.patch
 1. brcmfmac-enable-pmk-catching-for-ext-sae-wpa3-ap.patch
@@ -119,22 +117,23 @@ WiFi Driver Change List
 1. brcmfmac-add-support-for-CYW55560-PCIe-chipset.patch
 1. brcmfmac-add-bootloader-console-buffer-support-for-P.patch
 1. brcmfmac-support-4373-pcie.patch
-1. brcmfmac-extsae-supports-FT-over-SAE.patch
 1. brcmfmac-extsae-supports-SAE-OKC-roam.patch
 1. nl80211-add-roaming-offload-support.patch
 1. brcm80211-add-FT-11r-OKC-roaming-offload-support.patch
 1. brcmfmac-support-extsae-with-psk-1x-offloading.patch
-1. brcmfmac-disable-out-of-band-device-wake-based-DeepS.patch
+1. Disable-out-of-band-device-wake-based-DeepSleep-Stat.patch
 1. brcmfmac-Improve-the-delay-during-scan.patch
-1. non-upstream-skip-6G-oob-scan-report.patch[x]
+1. brcmfmac-skip-6G-oob-scan-report.patch
+1. Revert-brcmfmac-Improve-the-delay-during-scan.patch
+1. brcmfmac-Improve-the-delay-during-scan.patch
 1. brcmfmac-add-FW-AP-selection-mod-param.patch
-1. brcmfmac-changing-info-messages-under-debug-BRCMF_IN.patch
-1. brcmfmac-remove-default-2s-power-save-max-timeout.patch
+1. Changing-info-messages-under-debug-BRCMF_INFO_VAL.patch
+1. revert-brcmfmac-Set-timeout-value-when-configuring-p.patch
 1. brcmfmac-fixes-scan-invalid-channel-when-enable-host.patch
 1. brcmfmac-do-not-disable-controller-in-apmode-stop.patch
 1. brcmfmac-support-11ax-and-6G-band.patch
 1. brcmfmac-fixes-invalid-channel-still-in-the-channel-.patch
-1. non-upstream-Fix-lspci-not-enumerating-wifi-device-a.patch[x]
+1. non-upstream-Fix-lspci-not-enumerating-wifi-device-a.patch
 1. brcmfmac-support-signal-monitor-feature-for-wpa_supp.patch
 1. brcmfmac-add-support-for-CYW55560-SDIO-chipset.patch
 1. brcmfmac-Modified-Kconfig-help-format.patch
@@ -142,7 +141,8 @@ WiFi Driver Change List
 1. brcmfmac-report-cqm-rssi-event-based-on-rssi-change-.patch
 1. brcmfmac-add-WPA3_AUTH_1X_SUITE_B_SHA384-related-sup.patch
 1. non-upstream-Handle-the-6G-case-in-the-bw_cap-chansp.patch[x]
-1. non-upstream-Fix-kernel-crash-caused-by-race-on-time.patch[x]
+1. net-brcm80211-Fix-race-on-timer_add-in-wifi-driver.patch
+1. Remove-WARN_ON-while-no-6g-bw_cap.patch
 1. brcmfmac-update-the-statically-defined-HE-MAC-PHY-Ca.patch
 1. brcmfmac-fix-set_pmk-warning-message.patch
 1. brcmfmac-update-BIP-setting-and-wsec_info-for-GMAC-a.patch
@@ -150,6 +150,47 @@ WiFi Driver Change List
 1. brcmfmac-send-BCNLOST_MSG-event-on-beacon-loss-for-s.patch
 1. brcmfmac-trying-to-get-GCMP-cap-before-doing-set-it.patch
 1. brcmfmac-update-firmware-loading-name-for-CY5557x.patch
+1. brcmfmac-use-SR-core-id-to-decide-SR-capability-for-.patch
+1. brcmfmac-SAP-mode-parsing-sae_h2e-setting-from-beaco.patch
+1. brcmfmac-add-sanity-check-for-potential-underflow-an.patch
+1. brcmfmac-Fixing-vulnerability.patch
+1. brcmfmac-Implementing-set_bitrate_mask-cfg80211-ops-.patch
+1. brcm80211-add-FT-PSK-roaming-offload-support.patch
+1. brcmfmac-enable-6G-split-scanning-feature.patch
+1. brcmfmac-set-HE-6GHz-capabilities-for-bring-up-SAP.patch
+1. brcmfmac-add-interface-to-set-bsscolor-for-bring-up-.patch
+1. non-upstream-add-IFX-vendor-OUI-file.patch
+1. non-upstream-adding-vendor_cmds-are-with-IFX_OUI.patch
+1. brcmfmac-introduce-a-module-parameter-to-disable-the.patch
+1. brcmfmac-skip-6GHz-capab-registration-with-cfg80211-.patch
+1. brcmfmac-set-HE-rate-only-if-HE-MCS-set-and-valid.patch
+1. brcmfmac-remove-workaround-cause-the-FW-can-support-.patch
+1. brcmfmac-ext_owe-supporting.patch
+1. brcmfmac-Avoid-adding-two-sets-of-HE-Capab-and-Oper-.patch
+1. non-upstream-Add-IFX-TWT-Offload-support.patch
+1. non-upstream-vendor-cmd-addition-for-wl-he-bsscolor.patch[x]
+1. non-upstream-vendor-cmd-addition-for-wl-he-muedca_op.patch[x]
+1. non-upstream-vendor-cmd-addition-for-wl-amsdu.patch[x]
+1. non-upstream-vendor-cmd-addition-for-wl-ldpc_cap.patch[x]
+1. non-upstream-Refine-TWT-code-for-checkpatch.patch[x]
+1. cfg80211-fix-u8-overflow-in-cfg80211_update_notliste.patch
+1. cfg80211-mac80211-reject-bad-MBSSID-elements.patch
+1. cfg80211-fix-BSS-refcounting-bugs.patch
+1. cfg80211-avoid-nontransmitted-BSS-list-corruption.patch
+1. brcmfmac-Fix-potential-buffer-overflow-in-brcmf_fweh.patch
+1. non-upstream-vendor-cmd-addition-for-wl-oce-enable.patch[x]
+1. non-upstream-vendor-cmd-addition-for-wl-randmac.patch[x]
+1. brcmfmac-compile-warning-fix.patch
+1. Fix-invalid-RAM-address-warning-for-PCIE-platforms.patch
+1. brcmfmac-Fix-dpp-very-low-tput-issue.patch
+1. non-upstream-keep-IFX-license-header-for-non-upstrea.patch[x]
+1. non-upstream-internal-sup-uses-join-command-to-send-.patch[x]
+1. non-upstream-Supporting-IFX_vendor-commands-of-MBO.patch[x]
+1. brcmfmac-Set-corresponding-cqm-event-handlers-based-.patch
+1. non-upstream-isolate-power_save-off-and-mpc-0.patch[x]
+1. brcmfmac-Add-NULL-checks-to-fix-multiple-NULL-pointe.patch[x]
+1. brcmfmac-fix-compiler-error.patch
+1. non-upstream-supporting-giartrx-IFX-vendor-ID.patch[x]
 
 
       [-] means under upstream review
@@ -227,13 +268,31 @@ Hostap Change List
 1. non-upstream-wl-cmd-create-wl_do_cmd-as-an-entry-doi.patch[x]
 1. non-upstream-wl-cmd-create-ops-table-to-do-wl-comman.patch[x]
 1. non-upstream-wl-cmd-add-more-compile-flag.patch[x]
-1. base-ifx-2.10-Fix-dpp-config-parameter-setting.patch
-1. base-ifx-2_10-DPP-Resolving-failure-of-dpp-configura.patch
-1. base-ifx-2.10-Enabling-SUITEB192-and-SUITEB-compile-.patch
-1. base-ifx-2_10-DPP-Enabling-CLI_EDIT-option-for-enrol.patch
-1. base-ifx-2_10-P2P-Fixes-Scan-trigger-failed-once-GC-.patch
+1. Fix-dpp-config-parameter-setting.patch
+1. DPP-Resolving-failure-of-dpp-configurator-exchange-f.patch
+1. Enabling-SUITEB192-and-SUITEB-compile-options.patch
+1. DPP-Enabling-CLI_EDIT-option-for-enrollee-plus-respo.patch
+1. P2P-Fixes-Scan-trigger-failed-once-GC-invited-by-GO.patch
 1. non-upstream-SAE-disconnect-after-PMKSA-cache-expire.patch[x]
 1. Add-support-for-beacon-loss-roaming.patch
+1. wpa_supplicant-Set-PMKSA-to-driver-while-key-mgmt-is.patch
+1. nl80211-Set-NL80211_SCAN_FLAG_COLOCATED_6GHZ-in-scan.patch
+1. scan-Add-option-to-disable-6-GHz-collocated-scanning.patch
+1. Enabling-OWE-in-wpa_supplicant.patch
+1. Add-link-loss-timer-on-beacon-loss.patch
+1. FT-Sync-nl80211-ext-feature-index.patch
+1. nl80211-Introduce-a-vendor-header-for-vendor-NL-ifac.patch
+1. add-support-to-offload-TWT-setup-request-handling-to.patch
+1. add-support-to-offload-TWT-Teardown-request-handling.patch
+1. Add-support-to-configure-TWT-of-a-session-using-offs.patch
+1. Establish-a-Default-TWT-session-in-the-STA-after-ass.patch
+1. validate-the-TWT-parameters-exponent-and-mantissa-pa.patch
+1. Fix-for-station-sending-open-auth-instead-of-SAE-aut.patch
+1. Fix-ROAMOFFLOAD-raises-portValid-too-early.patch
+1. Fix-associating-failed-when-PMK-lifetime-is-set-to-1.patch
+1. non-upstream-p2p_add_group-command-unification.patch[x]
+1. non-upstream-MBO-wpa_cli-mbo-command-by-IFX-vendorID.patch[x]
+1. Flush-PMKID-info-irrespective-of-reason-code-on-deau.patch
 
 
 Note: [*] is the upstream tag containing the patch
