@@ -3,11 +3,11 @@ Infineon WiFi Linux WiFi Solution - Release Notes
 
 Release Version
 ---------------
-v5.15.58-2023_0222
+v5.15.58-2023_0523
 
 Release Date
 ------------
-2023-02-22
+2023-05-23
 
 
 WiFi Driver Change List
@@ -191,6 +191,36 @@ WiFi Driver Change List
 1. brcmfmac-Add-NULL-checks-to-fix-multiple-NULL-pointe.patch[x]
 1. brcmfmac-fix-compiler-error.patch
 1. non-upstream-supporting-giartrx-IFX-vendor-ID.patch[x]
+1. wireless-brcmfmac-Use-netif_rx.patch
+1. brcmfmac-replace-SDIO-function-number-with-definitio.patch
+1. brcmfmac-move-SDIO-function-number-definition-to-sdi.patch
+1. Restore-channel-info.patch
+1. brcmfmac-Avoid-adding-two-sets-of-HE-Capab-and-Oper-.patch
+1. non-upstream-sdio-t-put-tuning.patch[x]
+1. brcmfmac-get-chip-info-from-SDIOD-if-chip-common-spa.patch
+1. non-upstream-vendor-cmd-addition-for-wpa_cli-wnm_max.patch[x]
+1. Resolve-skb-alloc-failures-in-FMAC.patch
+1. non-upstream-sdio-t-put-tuning.patch[x]
+1. Fix-a-NULL-pointer-dereference.patch
+1. brcmfmac-add-protection-for-PCIe-Read-Write-out-of-b.patch
+1. Added-DSCP-to-WMM-UP-mapping.patch
+1. brcmfmac-fix-mac-address-is-not-assigned-for-iovar-B.patch
+1. non-upstream-fixing-compile-error-on-kernel-5.9-onwa.patch
+1. brcmfmac-fix-for-guard-interval-for-iw-set-bitrates.patch
+1. brcmfmac-Add-support-for-ethtool-packet-statistics.patch
+1. brcmfmac-Add-55500-chip-support.patch
+1. brcmfmac-SDIO-Rev31-changes-in-rmmod-sequence.patch
+1. brcmfmac-Wait-for-bootloader-ready-before-doing-back.patch
+1. brcmfmac-prevent-double-free-on-hardware-reset.patch
+1. brcmfmac-Update-D2H-Validation-Done-Timeout.patch
+1. brcmfmac-SR-in-not-getting-enabled-in-H1.patch
+1. brcmfmac-set-up-wrong-status-when-use-internal-suppl.patch
+1. brcmfmac-TWT-Add-a-new-feature-source-header-file-fo.patch
+1. brcmfmac-TWT-Add-support-to-handle-the-async-TWT-eve.patch
+1. brcmfmac-TWT-create-a-debugfs-file-to-expose-the-TWT.patch
+1. nl80211-Update-IFX-NL80211-Vendor-source-and-header-.patch
+1. brcmfmac-add-protection-for-firmware-doesn-t-have-ex.patch
+
 
 
       [-] means under upstream review
@@ -292,7 +322,12 @@ Hostap Change List
 1. Fix-associating-failed-when-PMK-lifetime-is-set-to-1.patch
 1. non-upstream-p2p_add_group-command-unification.patch[x]
 1. non-upstream-MBO-wpa_cli-mbo-command-by-IFX-vendorID.patch[x]
-1. Flush-PMKID-info-irrespective-of-reason-code-on-deau.patch
+1. EAP-TLS-Allow-TLSv1.3-support-to-be-enabled-with-bui.patch
+1. Enabling-TLS-v1.3-by-default.patch
+1. Disable-4-way-handshake-offload-for-DPP.patch
+1. non-upstream-WNM-wpa_cli-wnm_maxilde-command-by-IFX-.patch[x]
+1. brcmfmac-sync-content-of-nl80211_copy.h-for-BSS_COLO.patch
+1. WPA3-SAE-enable-nl_connect-socket-while-WPA_DRIVER_F.patch
 
 
 Note: [*] is the upstream tag containing the patch
