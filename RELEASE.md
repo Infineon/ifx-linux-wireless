@@ -3,11 +3,11 @@ Infineon WiFi Linux WiFi Solution - Release Notes
 
 Release Version
 ---------------
-v5.15.58-2023_0801
+v5.15.58-2023_0901
 
 Release Date
 ------------
-2023-08-01
+2023-09-01
 
 
 WiFi Driver Change List
@@ -221,7 +221,7 @@ WiFi Driver Change List
 1. nl80211-Update-IFX-NL80211-Vendor-source-and-header-.patch
 1. brcmfmac-add-protection-for-firmware-doesn-t-have-ex.patch
 1. brcmfmac-fix-compiler-error-when-using-vanilla-kerne.patch
-
+1. non-upstream-to-prevent-rx-interrupt-comes-too-early.patch
 
 
       [-] means under upstream review
