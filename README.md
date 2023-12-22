@@ -16,7 +16,9 @@ This is the Infineon Linux WiFi solution landing repo.
 * [WiFi driver](https://github.com/cypresssemiconductorco/ifx-wireless-drivers)
    * The wireless driver in a full Linux source tree (for viewing the commit-by-commit history).
    * For more information about the Linux brcmfmac project, see: [brcm80211 Wireless Wiki](https://wireless.wiki.kernel.org/en/users/drivers/brcm80211)
-
+* [IFXFMAC driver](https://github.com/Infineon/rpi-linux-kernel/releases/tag/6.1.21-hedorah-IFXFMAC-20231128)
+   * Introduced new ifxfmac WLAN full MAC Linux Driver dedicated for Infineon(Cypress) AIROC family of WLAN + BT Combo Chipsets.
+     
 ### What is not in this release
 * Nvram file
    * Board configurations.
