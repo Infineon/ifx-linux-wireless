@@ -243,80 +243,80 @@ WiFi Driver Change List
 1. brcmfmac-TWT-cleanup-stale-session-entries-after-rec.patch
 1. brcmfmac-Fix-kernel-crash-while-updating-tx-statisti.patch
 1. brcmfmac-avoid-memory-use-after-free-in-the-escan-ti.patch
-1.non-upstream-add-command-to-show-module-parameter.patch [x]
-1.brcmfmac-support-43022-Cypress-Vendor-and-Device-ID.patch
-1.brcmfmac-Chip-id-changes-for-43022.patch
-1.brcmfmac-Move-shared-console-address-location.patch
-1.brcmfmac-enable-support-for-split-scan-to-optimize-t.patch
-1.brcmfmac-kso-sequence-sleep-delay-enhancement.patch
-1.brcmfmac-Avoid-realloc-resources-on-DS1-exit-in-fw-d.patch
-1.brcmfmac-PCIe-RX-throughput-improvement.patch
-1.brcmfmac-Increase-the-kso_sequence-bail-out-timer.patch
-1.non-upstream-btsdio-add-ifx-bt-shared-sdio-file.patch [x]
-1.non-upstream-fixing-the-last-hostapd_cli-disabled-in.patch [x]
-1.brcmfmac-fixing-mbss-iovar-setting-for-multiple-BSS-.patch
-1.non-upstream-new-value-for-roamoff-for-report-differ.patch [x]
-1.brcmfmac-Support-idleclock-feature-for-43012-43022-c.patch
-1.non-upstream-btsdio-enable-export-api-to-r-w-F3-one-.patch [x]
-1.non-upstream-btsdio-enable-export-api-for-F3-receivi.patch [x]
-1.non-upstream-btsdio-attach-init-deinit.patch [x]
-1.non-upstream-btsdio-check-rx-interrupt-before-get-rx.patch [x]
-1.non-upstream-btsdio-enable-export-api-for-F3-transfe.patch [x]
-1.non-upstream-btsdio-support-export-api-to-set-block-.patch [x]
-1.non-upstream-btsdio-claim-function-3-in-band-irq.patch [x]
-1.non-upstream-btsdio-reset-bt-in-remove-flow-when-bt-.patch [x]
-1.non-upstream-btsdio-add-command-to-show-bt-shared-sd.patch [x]
-1.brcmfmac-DS2-udp-tx-crash-fix.patch
-1.brcmfmac-OOB-irq-support-on-43022-DS2.patch
-1.brcmfmac-pcie-INTMASK-address-is-another-address-fro.patch
-1.brcmfmac-fix-wrong-NULL-check-in-msgbuf_rx.patch
-1.non-upstream-btsdio-support-43012-43022.patch [x]
-1.brcmfmac-Bootloader-host-handshake-implementation.patch
-1.brcmfmac-Avoid-socram-access-in-secure-mode.patch
-1.brcmfmac-Support-secure-and-non-secure-code-flow.patch
-1.brcmfmac-Bring-up-DS1-for-43022-DM-chip.patch
-1.brcmfmac-do-not-access-D11-SHM-and-PMU-registers-for.patch
-1.brcmfmac-fixes-for-FW-redownload-after-DS1-2-exit.patch
-1.brcmfmac-New-rmmod-seq-for-43022-secure-mode.patch
-1.brcmfmac-Change-bus-width-independent-of-sdio_idlecl.patch
-1.brcmfmac-Remove-chip-id-check-from-kso-0-bail-out-lo.patch
-1.brcmfmac-fix-wrong-FW-extension-problem-for-secure-c.patch
-1.brcmfmac-separate-43022-sdio-download-function-from-.patch
-1.nl80211-Sync-with-wireless-next-2023-10-26-include-u.patch
-1.non-upstream-nl80211-bring-back-IFX-nl80211.h-change.patch [x]
-1.brcmfmac-set-authorized-flag-in-CONNECT-event-for-al.patch
-1.nl80211-Add-support-to-set-AP-settings-flags-with-si.patch
-1.brcmfmac-fix-compiler-warning-on-kernel-v4.12.patch
-1.brcmfmac-fix-warning-error-when-enable-PCIE_BARWIN_S.patch
-1.brcmfmac-Add-new-survey-dump-feature.patch
-1.brcmfmac-update-local-pmklist-while-process-auth_sta.patch
-1.brcmfmac-fix-mmc-tuning-failed.patch
-1.non-upstream-check-and-set-default-fcmode-of-the-chi.patch [x]
-1.brcmfmac-add-protection-for-not-calling-cfg80211_ch_.patch
-1.brcmfmac-get-wdev-from-the-event-reporting-ifp.patch
-1.non-upstream-vendor-cmd-addition-for-replay-counter.patch [x]
-1.non-upstream-btsdio-forward-device-id-to-bt-driver.patch [x]
-1.brcmfmac-skip-bss-update-when-NULL-mac-received-for-.patch
-1.brcmfmac-Adding-set-and-remove-F3-device.patch
-1.brcmfmac-Fix-KERNEL-WARNING-due-to-invalid-chspec.patch
-1.brcmfmac-Check-bus-sleep-state-in-isr.patch
-1.brcmfmac-resetting-sb-window-address.patch
-1.brcmfmac-SWLINUX-4018-Resolves-compilation-err.patch
-1.non-upstream-Increase-delay-in-kso-sequence.patch [x]
-1.brcmfmac-OOB-crash-Fix-on-iMX-platform.patch
-1.non-upstream-fix-func3-compile-error.patch [x]
-1.non-upstream-btsdio-add-DM-device-ID.patch [x]
-1.wifi-brcmfmac-Fix-use-after-free-bug-in-brcmf_cfg802.patch
-1.non-upstream-provide-the-iw-command-to-set-get-value.patch [x]
-1.non-upstream-vendor-cmds-string-infrastructure-with-.patch [x]
-1.non-upstream-mkeep_alive-and-tko-string-vendor-cmds.patch [x]
-1.brcmfmac-Add-module_param-to-set-idle_time_zero.patch
+1. non-upstream-add-command-to-show-module-parameter.patch [x]
+1. brcmfmac-support-43022-Cypress-Vendor-and-Device-ID.patch
+1. brcmfmac-Chip-id-changes-for-43022.patch
+1. brcmfmac-Move-shared-console-address-location.patch
+1. brcmfmac-enable-support-for-split-scan-to-optimize-t.patch
+1. brcmfmac-kso-sequence-sleep-delay-enhancement.patch
+1. brcmfmac-Avoid-realloc-resources-on-DS1-exit-in-fw-d.patch
+1. brcmfmac-PCIe-RX-throughput-improvement.patch
+1. brcmfmac-Increase-the-kso_sequence-bail-out-timer.patch
+1. non-upstream-btsdio-add-ifx-bt-shared-sdio-file.patch [x]
+1. non-upstream-fixing-the-last-hostapd_cli-disabled-in.patch [x]
+1. brcmfmac-fixing-mbss-iovar-setting-for-multiple-BSS-.patch
+1. non-upstream-new-value-for-roamoff-for-report-differ.patch [x]
+1. brcmfmac-Support-idleclock-feature-for-43012-43022-c.patch
+1. non-upstream-btsdio-enable-export-api-to-r-w-F3-one-.patch [x]
+1. non-upstream-btsdio-enable-export-api-for-F3-receivi.patch [x]
+1. non-upstream-btsdio-attach-init-deinit.patch [x]
+1. non-upstream-btsdio-check-rx-interrupt-before-get-rx.patch [x]
+1. non-upstream-btsdio-enable-export-api-for-F3-transfe.patch [x]
+1. non-upstream-btsdio-support-export-api-to-set-block-.patch [x]
+1. non-upstream-btsdio-claim-function-3-in-band-irq.patch [x]
+1. non-upstream-btsdio-reset-bt-in-remove-flow-when-bt-.patch [x]
+1. non-upstream-btsdio-add-command-to-show-bt-shared-sd.patch [x]
+1. brcmfmac-DS2-udp-tx-crash-fix.patch
+1. brcmfmac-OOB-irq-support-on-43022-DS2.patch
+1. brcmfmac-pcie-INTMASK-address-is-another-address-fro.patch
+1. brcmfmac-fix-wrong-NULL-check-in-msgbuf_rx.patch
+1. non-upstream-btsdio-support-43012-43022.patch [x]
+1. brcmfmac-Bootloader-host-handshake-implementation.patch
+1. brcmfmac-Avoid-socram-access-in-secure-mode.patch
+1. brcmfmac-Support-secure-and-non-secure-code-flow.patch
+1. brcmfmac-Bring-up-DS1-for-43022-DM-chip.patch
+1. brcmfmac-do-not-access-D11-SHM-and-PMU-registers-for.patch
+1. brcmfmac-fixes-for-FW-redownload-after-DS1-2-exit.patch
+1. brcmfmac-New-rmmod-seq-for-43022-secure-mode.patch
+1. brcmfmac-Change-bus-width-independent-of-sdio_idlecl.patch
+1. brcmfmac-Remove-chip-id-check-from-kso-0-bail-out-lo.patch
+1. brcmfmac-fix-wrong-FW-extension-problem-for-secure-c.patch
+1. brcmfmac-separate-43022-sdio-download-function-from-.patch
+1. nl80211-Sync-with-wireless-next-2023-10-26-include-u.patch
+1. non-upstream-nl80211-bring-back-IFX-nl80211.h-change.patch [x]
+1. brcmfmac-set-authorized-flag-in-CONNECT-event-for-al.patch
+1. nl80211-Add-support-to-set-AP-settings-flags-with-si.patch
+1. brcmfmac-fix-compiler-warning-on-kernel-v4.12.patch
+1. brcmfmac-fix-warning-error-when-enable-PCIE_BARWIN_S.patch
+1. brcmfmac-Add-new-survey-dump-feature.patch
+1. brcmfmac-update-local-pmklist-while-process-auth_sta.patch
+1. brcmfmac-fix-mmc-tuning-failed.patch
+1. non-upstream-check-and-set-default-fcmode-of-the-chi.patch [x]
+1. brcmfmac-add-protection-for-not-calling-cfg80211_ch_.patch
+1. brcmfmac-get-wdev-from-the-event-reporting-ifp.patch
+1. non-upstream-vendor-cmd-addition-for-replay-counter.patch [x]
+1. non-upstream-btsdio-forward-device-id-to-bt-driver.patch [x]
+1. brcmfmac-skip-bss-update-when-NULL-mac-received-for-.patch
+1. brcmfmac-Adding-set-and-remove-F3-device.patch
+1. brcmfmac-Fix-KERNEL-WARNING-due-to-invalid-chspec.patch
+1. brcmfmac-Check-bus-sleep-state-in-isr.patch
+1. brcmfmac-resetting-sb-window-address.patch
+1. brcmfmac-SWLINUX-4018-Resolves-compilation-err.patch
+1. non-upstream-Increase-delay-in-kso-sequence.patch [x]
+1. brcmfmac-OOB-crash-Fix-on-iMX-platform.patch
+1. non-upstream-fix-func3-compile-error.patch [x]
+1. non-upstream-btsdio-add-DM-device-ID.patch [x]
+1. wifi-brcmfmac-Fix-use-after-free-bug-in-brcmf_cfg802.patch
+1. non-upstream-provide-the-iw-command-to-set-get-value.patch [x]
+1. non-upstream-vendor-cmds-string-infrastructure-with-.patch [x]
+1. non-upstream-mkeep_alive-and-tko-string-vendor-cmds.patch [x]
+1. brcmfmac-Add-module_param-to-set-idle_time_zero.patch
 
-      [-] means under upstream review
-      [x] means no plan to upstream
-
-
-Hostap Change List
+       [-] means under upstream review
+       [x] means no plan to upstream
+   
+   
+Ho stap Change List
 -----------------
 1. wpa_supplicant-Support-4-way-handshake-offload-for-F.patch
 1. wpa_supplicant-Notify-Neighbor-Report-for-driver-tri.patch
@@ -389,5 +389,5 @@ Hostap Change List
 1. non-upstream-temporarily-disable-the-compiler-optimi.patch
 1. enable-ACS-compile-option-by-default.patch
 
-Note: [*] is the upstream tag containing the patch
-      [x] means no plan to upstream
+       [*] is the upstream tag containing the patch
+       [x] means no plan to upstream
