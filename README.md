@@ -170,13 +170,13 @@ hostapd/wpa_supplicant binaries.
 
 ### Build the hostapd/wpa_supplicant binaries
 ```bash
-#1. Download Hostap source and change the HEAD to commit cff80b4f7d3c
+#1. Download Hostap source and change the HEAD to commit 13837a031a78.
     git clone git://w1.fi/hostap.git
     cd hostap
-    git checkout cff80b4f7d3c
+    git checkout 13837a031a78
 #2. In Hostap root folder, untar/apply cypress patches with below bash commands
-    tar zxvf cypress-hostap_2_10-*.tar.gz
-    for i in cypress-hostap_2_10/*.patch; do patch -p1 < $i; done
+    tar zxvf cypress-hostap_2_11-*.tar.gz
+    for i in cypress-hostap_2_11-devel/*.patch; do patch -p1 < $i; done
 #3. (Hostapd) in hostapd root directory, have a build time configuration file,
 #   .config, and build hostapd and hostapd_cli
     cd hostapd
@@ -195,9 +195,11 @@ hostapd/wpa_supplicant binaries.
 #     hostap/wpa_supplicant/wpa_supplicant
 #     hostap/wpa_supplicant/wpa_cli
 ```
-Note: Set CONFIG_SAE=y in .config to enable WPA3-Personal (SAE) support.
+Note 1: Set CONFIG_SAE=y in .config to enable WPA3-Personal (SAE) support.
       5459x and 43012 only supports sae_pwe 1 or 2 in hostapd.conf and wpa_supplicant.conf
 
+Note 2: For commercial SAP use on an IOT device, we recommand to launch the AP with DTIM_PERIOD is 1.
+      dtim_period=1 in hostapd.conf
 
 Test Environment
 ----------------
