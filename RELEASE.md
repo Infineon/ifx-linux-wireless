@@ -3,11 +3,12 @@ Infineon WiFi Linux WiFi Solution - Release Notes
 
 Release Version
 ---------------
-v5.15.58-2024_0514
+v6.1.97-2024_1115
+
 
 Release Date
 ------------
-2024-05-14
+2024-11-21
 
 
 WiFi Driver Change List
@@ -311,6 +312,44 @@ WiFi Driver Change List
 1. non-upstream-vendor-cmds-string-infrastructure-with-.patch [x]
 1. non-upstream-mkeep_alive-and-tko-string-vendor-cmds.patch [x]
 1. brcmfmac-Add-module_param-to-set-idle_time_zero.patch
+1. brcmfmac-Fix-KERNEL-WARNING-on-customer-clm_blob.patch
+1. brcmfmac-FW-Header-Changes-to-TRXv5-for-H1-CP-Combo-.patch
+1. brcmfmac-Update-D2H-Validation-Done-Timeout.patch
+1. brcmfmac-Hatched-1-DDR50-CRC-error-KSO-Change.patch
+1. brcmfmac-add-new-iovar-format-for-action-frame.patch
+1. non-upstream-reserve-tx-credit-for-txctl-frame.patch [x]
+1. brcmfmac-refine-netif_rx-for-different-kernel-versio.patch
+1. brcmfmac-fix-LINUX_VERSION_CODE-warning.patch
+1. non-upstream-PFN-offload-implementation.patch [x]
+1. non-upstream-PFN-Add-support-for-remove_network-all-.patch [x]
+1. non-upstream-Add-support-for-pfn-autoswitch.patch [x]
+1. non-upstream-PNO-Fix-for-fw-trap-when-we-add-more-th.patch [x]
+1. non-upstream-PNO-PNO-Code-Cleanup.patch [x]
+1. brcmfmac-align-brcmf_wlc_version_le-with-official-co.patch
+1. brcmfmac-Add-FW-supplicant-profile-check-for-the-roa.patch
+1. brcmfmac-Fix-for-wifi-generation-info-missing-in-wpa.patch
+1. brcmfmac-WPA3-192bit-fixes.patch
+1. brcmfmac-fix-CERT-11N-Traffic-Differentiation-in-Sin.patch
+1. brcmfmac-Unexpected-failure-errors-are-seen-during-d.patch
+1. brcmfmac-P2P-Call-trace-Fix-in-P2P-GO.patch
+1. brcmfmac-Crash-in-OOB-Mode-while-using-sdio_in_isr.patch
+1. brcmfmac-Fix-SDIO-bus-access-in-SDIO-sleep-state.patch
+1. non-upstream-IW-vendor-cmds-for-NAT-keep-alive-tko-p.patch [x]
+1. brcmfmac-WPA3-Cert-19.6.1-Disable-idsup-for-192-bit-.patch
+1. brcmfmac-Enable-Internal-supplicant-for-OWE-AKM.patch
+1. brcmfmac-Add-Support-for-OWE-offload.patch
+1. brcmfmac-Add-CLM-support-to-USB-interface.patch
+1. brcmfmac-FT-Cert-FT-and-FT-roam-support-in-driver.patch
+1. brcmfmac-Fix-wpa_auth-setting-for-wpa3-1x-sha256.patch
+1. non-upstream-fix-kernel-warning-for-Suite-B-192-call.patch [x]
+1. non-upstream-rewrite-feat_flag-to-preven-the-use-of-.patch [x]
+1. brcmfmac-fix-error-msg-while-deleting-virtual-interf.patch
+1. brcmfmac-Send-sup_wpa-iovar-only-to-firmware-which-h.patch
+1. brcmfmac-fix-reload-FMAC-timeout-error-while-using-b.patch
+1. brcmfmac-CERT-OCE-Fix-EAPOL-Timeout-issue.patch
+1. brcmfmac-enable-remote-wakeup-before-USB-suspend-if-.patch
+1. brcmfmac-Fix-data-traffic-halted-after-reconnect.patch
+1. brcmfmac-fix-get_assoc_ies-misused-endian-untranslat.patch
 
        [-] means under upstream review
        [x] means no plan to upstream
@@ -388,6 +427,29 @@ Ho stap Change List
 1. non-upstream-WNM-fix-wnm_maxilde-coredump-and-get-em.patch [x]
 1. non-upstream-temporarily-disable-the-compiler-optimi.patch
 1. enable-ACS-compile-option-by-default.patch
+1. non-upstream-Added-support-for-PFN-offload.patch              [x] 
+1. non-upstream-Fix-SSID-corruption-of-PFN-config-to-dr.patch    [x]
+1. non-upstream-Fix-pfn_status-and-SSID-corruption-of-P.patch    [x]
+1. non-upstream-PFN-Add-support-for-remove_network-all-.patch    [x]
+1. non-upstream-Add-support-for-pfn-autoswitch.patch             [x]
+1. non-upstream-Fix-for-pno-scan-starts-after-30sec-of-.patch    [x]
+1. non-upstream-PNO-cleanup.patch                                [x]
+1. Suite-B-Update-Proper-PMK-len-for-192bit-Suite-B-AKM.patch
+1. STA-connection-status-update-with-11AX-info.patch
+1. DUT-fails-to-connect-in-WPA2-when-AP-is-configured-i.patch
+1. WPA3-CERT-WPA3-5.8.3-Roam-to-WPA3-transition-mode-Fa.patch
+1. OWE-Enable-4way-handshake-offload-for-OWE.patch
+1. non-upstream-Disable-4way-offload-for-P2P-GO.patch            [x]
+1. Block-hostapd-config-with-mfpr-and-PSK-key_mgmt.patch
+1. SAE-Reject-invalid-Rejected-Groups-element-in-the-pa.patch
+1. SAE-Check-for-invalid-Rejected-Groups-element-length.patch
+1. SAE-Check-for-invalid-Rejected-Groups-element-length.patch
+1. Fix-EAPOL-retry-issue-while-roaming-with-BTM.patch
+1. non-upstream-Fix-802.1x-Preauth-roaming-doesn-t-upda.patch    [x]
+1. PNO-Check-PFN_ENABLE-configuration.patch
+1. non-upstream-Update-configuration.patch                       [x]
+1. TWT-allow-TWT-offload-even-though-CONFIG_TESTING_OPT.patch
+1. non-upstream-Enable-Testing-configuration-for-DPP-ce.patch    [x]
 
        [*] is the upstream tag containing the patch
        [x] means no plan to upstream
