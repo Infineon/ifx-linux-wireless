@@ -37,11 +37,11 @@ following: NVRAM, clm_blob and MFG Binaries.
 
 Instructions
 ------------
-The WiFi driver is developed based on Linux v5.10.9. Older kernels need
+The WiFi driver is developed based on Linux v6.1.97. Older kernels need
 use backports package. Below are examples of how to use this package
-with an older kernel or linux-stable v5.10.9.
+with an older kernel or linux-stable v6.1.97.
 
-### Using backports with an older kernel (v3.10+)
+### Using backports with an older kernel (v4.14+)
 
 Linux kernel image and WiFi driver modules need to be built separately.
 Below is the example of using with iMX Linux v4.14.78:
@@ -74,7 +74,7 @@ Below is the example of using with iMX Linux v4.14.78:
 ```bash
 #1. Untar the Cypress backports package
     tar zxvf cypress-backports-*.tar.gz
-    cd v5.15.58-backports
+    cd v6.1.97-backports
 #2. (Native) compile local tools and generate .config (in a new terminal
 #   without sourcing Yoctol toolchain settings)
     bash
@@ -93,7 +93,7 @@ Below is the example of using with iMX Linux v4.14.78:
 #### Device tree
 ```bash
 #1. Download Infineon devicetree package
-    git clone -b latest-v5.10 https://github.com/cypresssemiconductorco/ifx-linux-wireless.git
+    git clone -b latest-v6.1 https://github.com/cypresssemiconductorco/ifx-linux-wireless.git
 #2. Find your board's dtb file, for example
 #      ifx-linux-wireless/devicetree/iMX6SX/4.14.78/imx6sx-sdb-btwifi-fmac.dtb
 ```
@@ -114,7 +114,7 @@ Note: If your board's dtb is not available in the cypress devicetree
     scp <dtb file> root@$TARGET_IP:/run/media/mmcblk1p1/cy.dtb
     scp <zImage file> root@$TARGET_IP:/run/media/mmcblk1p1/zImage_cy
 #2. Copy firmware files to the target board
-    git clone -b latest-v5.10 https://github.com/cypresssemiconductorco/ifx-linux-firmware.git
+    git clone -b latest-v6.1 https://github.com/cypresssemiconductorco/ifx-linux-firmware.git
     scp ifx-linux-firmware/firmware/* root@$TARGET_IP:/lib/firmware/cypress
 #3. Copy your nvram file (from board vendor) to the target board and rename it
     scp <nvram file> root@$TARGET_IP:/lib/firmware/cypress/<fw name>.txt
@@ -137,13 +137,13 @@ Note: If your board's dtb is not available in the cypress devicetree
 ```
 Note: More on fmac driver [firmware/nvram install](https://wireless.wiki.kernel.org/en/users/drivers/brcm80211#firmware_installation1)
 
-### Using Linux Stable v5.15.58
+### Using Linux Stable v6.1.97
 ```bash
 #1. Download Linux stable kernel source
-    wget https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/snapshot/linux-5.15.58.tar.gz
-    tar zxvf linux-5.15.58.tar.gz
+    wget https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/snapshot/linux-6.1.97.tar.gz
+    tar zxvf linux-6.1.97.tar.gz
 #2. In Linux root folder, untar/apply cypress patches with below bash commands
-    cd linux-5.15.58
+    cd linux-6.1.97
     tar zxvf cypress-patch*.tar.gz
     for i in cypress-patch/*.patch; do patch -p1 < $i; done
 #3. Set kernel .config and enable below options, then compile kernel image
