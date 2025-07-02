@@ -197,7 +197,7 @@ hostapd/wpa_supplicant binaries.
 #     hostap/wpa_supplicant/wpa_cli
 ```
 Note 1: Set CONFIG_SAE=y in .config to enable WPA3-Personal (SAE) support.
-      5459x and 43012 only supports sae_pwe 1 or 2 in hostapd.conf and wpa_supplicant.conf
+      5459x, 43012 and 43439 only supports sae_pwe 1 or 2 in hostapd.conf and wpa_supplicant.conf
 
 Note 2: For commercial SAP use on an IOT device, we recommand to launch the AP with DTIM_PERIOD is 1.
       dtim_period=1 in hostapd.conf
