@@ -3,7 +3,7 @@ Infineon Wifi Linux WiFi Solution
 
 Description
 -----------
-This is the Infineon Linux WiFi solution landing repo.
+This is the Infineon Linux WiFi solution landing repository.
 
 ### What is in this release
 * [Backports driver package](https://github.com/cypresssemiconductorco/ifx-backports)
@@ -19,7 +19,7 @@ This is the Infineon Linux WiFi solution landing repo.
 
      
 ### What is not in this release
-* Nvram file
+* NVRAM file
    * Board configurations.
 * Customized clm_blob file
    * Regulatory settings optimized for the board.
@@ -37,9 +37,9 @@ following: NVRAM, clm_blob and MFG Binaries.
 
 Instructions
 ------------
-The WiFi driver is developed based on Linux v6.1.97. Older kernels need
+The WiFi driver is developed based on Linux v6.1.110. Older kernels need
 use backports package. Below are examples of how to use this package
-with an older kernel or linux-stable v6.1.97.
+with an older kernel or linux-stable v6.1.110.
 
 ### Using backports with an older kernel (v4.14+)
 
@@ -74,7 +74,7 @@ Below is the example of using with iMX Linux v4.14.78:
 ```bash
 #1. Untar the Cypress backports package
     tar zxvf cypress-backports-*.tar.gz
-    cd v6.1.97-backports
+    cd v6.1.110-backports
 #2. (Native) compile local tools and generate .config (in a new terminal
 #   without sourcing Yoctol toolchain settings)
     bash
@@ -137,13 +137,13 @@ Note: If your board's dtb is not available in the cypress devicetree
 ```
 Note: More on fmac driver [firmware/nvram install](https://wireless.wiki.kernel.org/en/users/drivers/brcm80211#firmware_installation1)
 
-### Using Linux Stable v6.1.97
+### Using Linux Stable v6.1.110
 ```bash
 #1. Download Linux stable kernel source
-    wget https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/snapshot/linux-6.1.97.tar.gz
-    tar zxvf linux-6.1.97.tar.gz
+    wget https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/snapshot/linux-6.1.110.tar.gz
+    tar zxvf linux-6.1.110.tar.gz
 #2. In Linux root folder, untar/apply cypress patches with below bash commands
-    cd linux-6.1.97
+    cd linux-6.1.110
     tar zxvf cypress-patch*.tar.gz
     for i in cypress-patch/*.patch; do patch -p1 < $i; done
 #3. Set kernel .config and enable below options, then compile kernel image
@@ -153,6 +153,7 @@ Note: More on fmac driver [firmware/nvram install](https://wireless.wiki.kernel.
 #      CONFIG_BRCMFMAC_PROTO_BCDC=y
 #      CONFIG_BRCMFMAC_PCIE=y
 #      CONFIG_BRCMFMAC_PROTO_MSGBUF=y
+#      CONFIG_BRCMFMAC_USB=y
 #4. (optional) Backup original firmware files
     cp /lib/firmware/cypress /lib/firmware/cypress-bak -r
 #5. Update firmware files in /lib/firmware/cypress
