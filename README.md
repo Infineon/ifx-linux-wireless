@@ -37,9 +37,9 @@ following: NVRAM, clm_blob and MFG Binaries.
 
 Instructions
 ------------
-The WiFi driver is developed based on Linux v6.1.110. Older kernels need
+The WiFi driver is developed based on Linux v6.1.145. Older kernels need
 use backports package. Below are examples of how to use this package
-with an older kernel or linux-stable v6.1.110.
+with an older kernel or linux-stable v6.1.145.
 
 ### Using backports with an older kernel (v4.14+)
 
@@ -210,4 +210,5 @@ Test Environment
 * x86
    * Linux v5.4
    * Backports driver
+
 
