@@ -3,11 +3,11 @@ Infineon WiFi Linux WiFi Solution - Release Notes
 
 Release Version
 ---------------
-v6.1.110-2025_0602
+v6.1.145-2026_0108
 
 Release Date
 ------------
-2025-06-02
+2026-01-08
 
 Wi-Fi Driver Change List
 ----------------------
@@ -346,56 +346,76 @@ Wi-Fi Driver Change List
  * 0333-non-upstream-workaround-to-recover-credit-if-bus-err.patch  [x]
  * 0334-brcmfmac-Ignore-Bus-sleep-changes-in-KSO-sequence.patch
  * 0335-non-upstream-add-IW-vendor-cmds-to-config-mchan-algo.patch  [x]
+ * 0336-non-upstream-cleanup-fws-in-link-down-while-SDIO-bus.patch  [x]
+ * 0337-non-upstream-handle-receive-error-in-SG-case.patch          [x]
+ * 0338-brcmfmac-Restrict-SDIO-CMD53-access-when-bus-in-slee.patch
+ * 0339-brcmfmac-Restrict-SDIO-CMD52-access-when-bus-in-slee.patch
+ * 0340-brcmfmac-handle-SDIO-readl-command-error.patch
+ * 0341-nl80211-Sync-with-wireless-next.git-include-uapi-lin.patch
+ * 0342-brcmfmac-re-download-fw-while-encounter-failure-on-f.patch
+ * 0343-brcmfmac-enhancing-the-reason-readibility-to-ROAMING.patch
+ * 0344-brcmfmac-restore-mac-given-from-user-after-reset.patch
+ * 0345-brcmfmac-Added-support-to-store-ram-dump-in-persiste.patch
+ * 0346-brcmfmac-fix-compile-error-when-disable-bt-share-sdi.patch
+ * 0347-brcmfmac-unwrap-brcmf_cfg80211_set_rekey_data-from-C.patch
+ * 0348-brcmfmac-SDIO-recovery-fixes.patch
+ * 0349-brcmfmac-Fix-for-H1-DM-FW-load-issue.patch
+ * 0350-brcmfmac-fix-compile-error-on-v4.x-kernel-and-32bit-.patch
+ * 0351-non-upstream-p2p_invite-reinvoke-a-Persistent-Group-.patch  [x]
+ * 0352-brcmfmac-KSO-Logging-improvement.patch
+ * 0353-brcmfmac-fix-hang-issue-after-bus_reset.patch
+ * 0354-brcmfmac-Fix-missing-NULL-pointer-check.patch
+ * 0355-non-upstream-fix-channel-issues-caused-by-iw-reg-set.patch  [x]
 
         [-] means under upstream review
         [x] means no plan to upstream
 
 Hostap Change List
 -----------------
- * 0001-wpa_supplicant-Support-4-way-handshake-offload-for-F.patch
- * 0002-wpa_supplicant-Notify-Neighbor-Report-for-driver-tri.patch
- * 0003-nl80211-Report-connection-authorized-in-EVENT_ASSOC.patch
- * 0004-wpa_supplicant-Add-PMKSA-cache-for-802.1X-4-way-hand.patch
- * 0005-OpenSSL-Fix-build-with-OpenSSL-1.0.1.patch
- * 0006-DPP-Do-more-condition-test-for-AKM-type-DPP-offload.patch
- * 0007-non-upstream-defconfig_base-Add-Infineon-default-con.patch    [x]
- * 0008-Fix-to-check-Invalid-GTK-IE-length-in-M3-at-STA.patch
- * 0009-Add-CONFIG_WPA3_SAE_AUTH_EARLY_SET-flags-and-codes.patch
- * 0010-wpa_supplicant-Support-WPA_KEY_MGMT_FT-for-eapol-off.patch
- * 0011-wpa_supplicant-suppress-deauth-for-PMKSA-caching-dis.patch
- * 0012-Fix-for-PMK-expiration-issue-through-supplicant.patch
- * 0013-SAE-Drop-PMKSA-cache-after-receiving-specific-deauth.patch
- * 0014-Avoid-deauthenticating-STA-if-the-reason-for-freeing.patch
- * 0015-wpa_supplicant-support-bgscan.patch
- * 0016-non-upstream-wl-cmd-create-interface-to-support-driv.patch    [x]
- * 0017-non-upstream-wl-cmd-create-wl_do_cmd-as-an-entry-doi.patch    [x]
- * 0018-non-upstream-wl-cmd-create-ops-table-to-do-wl-comman.patch    [x]
- * 0019-non-upstream-wl-cmd-add-more-compile-flag.patch               [x]
- * 0020-Fix-dpp-config-parameter-setting.patch
- * 0021-DPP-Resolving-failure-of-dpp-configurator-exchange-f.patch
- * 0022-Enabling-SUITEB192-and-SUITEB-compile-options.patch
- * 0023-DPP-Enabling-CLI_EDIT-option-for-enrollee-plus-respo.patch
- * 0024-non-upstream-SAE-disconnect-after-PMKSA-cache-expire.patch    [x]
- * 0025-Add-support-for-beacon-loss-roaming.patch
- * 0026-wpa_supplicant-Set-PMKSA-to-driver-while-key-mgmt-is.patch
- * 0027-Enabling-OWE-in-wpa_supplicant.patch
- * 0028-Add-link-loss-timer-on-beacon-loss.patch
- * 0029-TWT-Add-support-to-offload-TWT-Session-setup-handlin.patch
- * 0030-nl80211-Introduce-new-Vendor-header-file-for-driver-.patch
- * 0031-fixup-nl80211-Introduce-new-Vendor-header-file-for-d.patch
- * 0032-TWT-Use-IFX-Vendor-path-to-offload-TWT-session-setup.patch
- * 0033-TWT-Use-IFX-Vendor-path-to-offload-TWT-session-Teard.patch
+ * 0001-Adding-gitlab-CI-yml.patch
+ * 0002-wpa_supplicant-Support-4-way-handshake-offload-for-F.patch
+ * 0003-wpa_supplicant-Notify-Neighbor-Report-for-driver-tri.patch
+ * 0004-nl80211-Report-connection-authorized-in-EVENT_ASSOC.patch
+ * 0005-wpa_supplicant-Add-PMKSA-cache-for-802.1X-4-way-hand.patch
+ * 0006-OpenSSL-Fix-build-with-OpenSSL-1.0.1.patch
+ * 0007-DPP-Do-more-condition-test-for-AKM-type-DPP-offload.patch
+ * 0008-non-upstream-defconfig_base-Add-Infineon-default-con.patch    	[x]
+ * 0009-Fix-to-check-Invalid-GTK-IE-length-in-M3-at-STA.patch
+ * 0010-Add-CONFIG_WPA3_SAE_AUTH_EARLY_SET-flags-and-codes.patch
+ * 0011-wpa_supplicant-Support-WPA_KEY_MGMT_FT-for-eapol-off.patch
+ * 0012-wpa_supplicant-suppress-deauth-for-PMKSA-caching-dis.patch
+ * 0013-Fix-for-PMK-expiration-issue-through-supplicant.patch
+ * 0014-SAE-Drop-PMKSA-cache-after-receiving-specific-deauth.patch
+ * 0015-Avoid-deauthenticating-STA-if-the-reason-for-freeing.patch
+ * 0016-wpa_supplicant-support-bgscan.patch
+ * 0017-non-upstream-wl-cmd-create-interface-to-support-driv.patch    	[x]
+ * 0018-non-upstream-wl-cmd-create-wl_do_cmd-as-an-entry-doi.patch    	[x]
+ * 0019-non-upstream-wl-cmd-create-ops-table-to-do-wl-comman.patch    	[x]
+ * 0020-non-upstream-wl-cmd-add-more-compile-flag.patch					[x]
+ * 0021-Fix-dpp-config-parameter-setting.patch
+ * 0022-DPP-Resolving-failure-of-dpp-configurator-exchange-f.patch
+ * 0023-Enabling-SUITEB192-and-SUITEB-compile-options.patch
+ * 0024-DPP-Enabling-CLI_EDIT-option-for-enrollee-plus-respo.patch
+ * 0025-non-upstream-SAE-disconnect-after-PMKSA-cache-expire.patch    	[x]
+ * 0026-Add-support-for-beacon-loss-roaming.patch
+ * 0027-wpa_supplicant-Set-PMKSA-to-driver-while-key-mgmt-is.patch
+ * 0028-Enabling-OWE-in-wpa_supplicant.patch
+ * 0029-Add-link-loss-timer-on-beacon-loss.patch
+ * 0030-TWT-Add-support-to-offload-TWT-Session-setup-handlin.patch
+ * 0031-nl80211-Introduce-new-Vendor-header-file-for-driver-.patch
+ * 0032-TWT-Use-INF-Vendor-path-to-offload-TWT-session-setup.patch
+ * 0033-TWT-Use-INF-Vendor-path-to-offload-TWT-session-Teard.patch
  * 0034-TWT-Add-support-to-configure-TWT-of-a-session-using-.patch
  * 0035-Fix-for-station-sending-open-auth-instead-of-SAE-aut.patch
  * 0036-Fix-associating-failed-when-PMK-lifetime-is-set-to-1.patch
- * 0037-non-upstream-p2p_add_group-command-unification.patch          [x]
- * 0038-non-upstream-MBO-wpa_cli-mbo-command-by-IFX-vendorID.patch    [x]
+ * 0037-non-upstream-p2p_add_group-command-unification.patch	    	[x]
+ * 0038-non-upstream-MBO-wpa_cli-mbo-command-by-INF-vendorID.patch    	[x]
  * 0039-Enabling-TLS-v1.3-by-default.patch
  * 0040-Disable-4-way-handshake-offload-for-DPP.patch
- * 0041-non-upstream-WNM-wpa_cli-wnm_maxilde-command-by-IFX-.patch    [x]
+ * 0041-non-upstream-WNM-wpa_cli-wnm_maxilde-command-by-INF-.patch    	[x]
  * 0042-OWE-AP-enable-OWE-compile-option-for-hostapd-executi.patch
  * 0043-DPP2.0-support-DPP2.0-and-add-pfs-init-flow-on-EVENT.patch
- * 0044-non-upstream-Prevent-invalid-akm-key-mgmt-when-MFP-r.patch    [x]
+ * 0044-non-upstream-Prevent-invalid-akm-key-mgmt-when-MFP-r.patch    	[x]
  * 0045-brcmfmac-add-a-configurable-link_loss-parameter-for-.patch
  * 0046-DPP-fix-for-akm-sae-and-add-dpp_reconfig-command-to-.patch
  * 0047-DPP-enable-CONFIG_DPP3-flag.patch
@@ -403,40 +423,35 @@ Hostap Change List
  * 0049-nl8211-Set-NL80211_WPA_VERSION_2-vs-_3-based-on-AKM-.patch
  * 0050-bgscan-wpa_supplicant-segment-fault-when-do-simple-b.patch
  * 0051-hostapd-calling-driver-to-remove-pmkid-while-pmk-cac.patch
- * 0052-non-upstream-Check-supported-Replay-Counters-through.patch    [x]
- * 0053-non-upstream-WNM-fix-wnm_maxilde-coredump-and-get-em.patch    [x]
- * 0054-non-upstream-temporarily-disable-the-compiler-optimi.patch    [x]
+ * 0052-non-upstream-Check-supported-Replay-Counters-through.patch    	[x]
+ * 0053-non-upstream-WNM-fix-wnm_maxilde-coredump-and-get-em.patch    	[x]
+ * 0054-non-upstream-temporarily-disable-the-compiler-optimi.patch    	[x]
  * 0055-enable-ACS-compile-option-by-default.patch
- * 0056-non-upstream-Added-support-for-PFN-offload.patch              [x]
- * 0057-non-upstream-Fix-SSID-corruption-of-PFN-config-to-dr.patch    [x]
- * 0058-non-upstream-Fix-pfn_status-and-SSID-corruption-of-P.patch    [x]
- * 0059-non-upstream-PFN-Add-support-for-remove_network-all-.patch    [x]
- * 0060-non-upstream-Add-support-for-pfn-autoswitch.patch             [x]
- * 0061-non-upstream-Fix-for-pno-scan-starts-after-30sec-of-.patch    [x]
- * 0062-non-upstream-PNO-cleanup.patch                                [x]
+ * 0056-non-upstream-Added-support-for-PFN-offload.patch	    		[x]
+ * 0057-non-upstream-Fix-SSID-corruption-of-PFN-config-to-dr.patch    	[x]
+ * 0058-non-upstream-Fix-pfn_status-and-SSID-corruption-of-P.patch    	[x]
+ * 0059-non-upstream-PFN-Add-support-for-remove_network-all-.patch    	[x]
+ * 0060-non-upstream-Add-support-for-pfn-autoswitch.patch		    	[x]
+ * 0061-non-upstream-Fix-for-pno-scan-starts-after-30sec-of-.patch    	[x]
+ * 0062-non-upstream-PNO-cleanup.patch							    	[x]
  * 0063-Suite-B-Update-Proper-PMK-len-for-192bit-Suite-B-AKM.patch
  * 0064-STA-connection-status-update-with-11AX-info.patch
  * 0065-DUT-fails-to-connect-in-WPA2-when-AP-is-configured-i.patch
  * 0066-WPA3-CERT-WPA3-5.8.3-Roam-to-WPA3-transition-mode-Fa.patch
  * 0067-OWE-Enable-4way-handshake-offload-for-OWE.patch
- * 0068-non-upstream-Disable-4way-offload-for-P2P-GO.patch            [x]
+ * 0068-non-upstream-Disable-4way-offload-for-P2P-GO.patch		    	[x]
  * 0069-Block-hostapd-config-with-mfpr-and-PSK-key_mgmt.patch
- * 0070-SAE-Reject-invalid-Rejected-Groups-element-in-the-pa.patch
- * 0071-SAE-Check-for-invalid-Rejected-Groups-element-length.patch
- * 0072-SAE-Check-for-invalid-Rejected-Groups-element-length.patch
- * 0073-Fix-EAPOL-retry-issue-while-roaming-with-BTM.patch
- * 0074-non-upstream-Fix-802.1x-Preauth-roaming-doesn-t-upda.patch    [x]
- * 0075-PNO-Check-PFN_ENABLE-configuration.patch
- * 0076-non-upstream-Update-configuration.patch                       [x]
- * 0077-TWT-allow-TWT-offload-even-though-CONFIG_TESTING_OPT.patch
- * 0078-non-upstream-Enable-Testing-configuration-for-DPP-ce.patch    [x]
- * 0079-PNO-remove-PNO-SSID-from-firmware-when-remove_networ.patch
- * 0080-SSID-protection-in-4-way-handshake-on-STA.patch
- * 0081-SSID-protection-in-4-way-handshake-on-AP.patch
- * 0082-Add-support-for-SSID-protection-nl-vendor-command.patch
- * 0083-SSID-protection-fixes.patch
- * 0084-PNO-show-error-when-add-more-than-16-SSID-via-wpa_cl.patch
- * 0085-Fix-for-incorrect-11ac-connection-status.patch
- * 0086-fix-hostapd-wpa_supplicant-initialization-crash-issu.patch
+ * 0070-Fix-EAPOL-retry-issue-while-roaming-with-BTM.patch
+ * 0071-non-upstream-Fix-802.1x-Preauth-roaming-doesn-t-upda.patch    	[x]
+ * 0072-PNO-Check-PFN_ENABLE-configuration.patch
+ * 0073-non-upstream-Update-configuration.patch					    	[x]
+ * 0074-TWT-allow-TWT-offload-even-though-CONFIG_TESTING_OPT.patch
+ * 0075-non-upstream-Enable-Testing-configuration-for-DPP-ce.patch	   	[x]
+ * 0076-PNO-remove-PNO-SSID-from-firmware-when-remove_networ.patch
+ * 0077-Add-support-for-SSID-protection-nl-vendor-command.patch
+ * 0078-SSID-protection-fixes.patch
+ * 0079-PNO-show-error-when-add-more-than-16-SSID-via-wpa_cl.patch
+ * 0080-Fix-for-incorrect-11ac-connection-status.patch
+ * 0081-TWT-fix-twt_offset-with-wrong-value.patch
 
         [x] means no plan to upstream

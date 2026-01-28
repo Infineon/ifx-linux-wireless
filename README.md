@@ -74,7 +74,7 @@ Below is the example of using with iMX Linux v4.14.78:
 ```bash
 #1. Untar the Cypress backports package
     tar zxvf cypress-backports-*.tar.gz
-    cd v6.1.110-backports
+    cd v6.1.145-backports
 #2. (Native) compile local tools and generate .config (in a new terminal
 #   without sourcing Yoctol toolchain settings)
     bash
@@ -137,13 +137,13 @@ Note: If your board's dtb is not available in the cypress devicetree
 ```
 Note: More on fmac driver [firmware/nvram install](https://wireless.wiki.kernel.org/en/users/drivers/brcm80211#firmware_installation1)
 
-### Using Linux Stable v6.1.110
+### Using Linux Stable v6.1.145
 ```bash
 #1. Download Linux stable kernel source
-    wget https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/snapshot/linux-6.1.110.tar.gz
-    tar zxvf linux-6.1.110.tar.gz
+    wget https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/snapshot/linux-6.1.145.tar.gz
+    tar zxvf linux-6.1.145.tar.gz
 #2. In Linux root folder, untar/apply cypress patches with below bash commands
-    cd linux-6.1.110
+    cd linux-6.1.145
     tar zxvf cypress-patch*.tar.gz
     for i in cypress-patch/*.patch; do patch -p1 < $i; done
 #3. Set kernel .config and enable below options, then compile kernel image
@@ -171,13 +171,13 @@ hostapd/wpa_supplicant binaries.
 
 ### Build the hostapd/wpa_supplicant binaries
 ```bash
-#1. Download Hostap source and change the HEAD to commit 13837a031a78.
+#1. Download Hostap source and change the HEAD to commit a8655be0b18.
     git clone git://w1.fi/hostap.git
     cd hostap
-    git checkout 13837a031a78
+    git checkout a8655be0b18
 #2. In Hostap root folder, untar/apply cypress patches with below bash commands
-    tar zxvf cypress-hostap_2_11-*.tar.gz
-    for i in cypress-hostap_2_11-devel/*.patch; do patch -p1 < $i; done
+    tar zxvf cypress-hostap_2_12-*.tar.gz
+    for i in cypress-hostap_2_12-devel/*.patch; do patch -p1 < $i; done
 #3. (Hostapd) in hostapd root directory, have a build time configuration file,
 #   .config, and build hostapd and hostapd_cli
     cd hostapd
