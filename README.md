@@ -1,20 +1,20 @@
-Infineon Wifi Linux WiFi Solution
+Infineon Linux Wi-Fi solution
 =================================
 
 Description
 -----------
-This is the Infineon Linux WiFi solution landing repository.
+This is the Infineon Linux Wi-Fi solution landing repository.
 
 ### What is in this release
 * [Backports driver package](https://github.com/cypresssemiconductorco/ifx-backports)
-   * The backports wireless driver source (for actual cross compilation).
+   * Contains the backports wireless driver source (for actual cross compilation).
    * For more information about Linux backports project, see: [Linux Backports Project](https://backports.wiki.kernel.org/index.php/Main_Page)
 * [Hostapd/wpa_supplicant](https://github.com/cypresssemiconductorco/ifx-hostap)
-   * The tools for controling the wireless interface(s).
+   * Contains utilities for managing and configuring wireless network interfaces.
 * [Firmware/clm_blob files](https://github.com/cypresssemiconductorco/ifx-linux-firmware)
-   * The firmware alone with the country locale settings.
-* [WiFi driver](https://github.com/cypresssemiconductorco/ifx-wireless-drivers)
-   * The wireless driver in a full Linux source tree (for viewing the commit-by-commit history).
+   * Contains WLAN firmware binaries and CLM blob files required for country locale settings.
+* [Wi-Fi driver](https://github.com/cypresssemiconductorco/ifx-wireless-drivers)
+   * Contains the wireless driver in a full Linux source tree (for viewing the commit-by-commit history).
    * For more information about the Linux brcmfmac project, see: [brcm80211 Wireless Wiki](https://wireless.wiki.kernel.org/en/users/drivers/brcm80211)
 
      
@@ -37,13 +37,13 @@ following: NVRAM, clm_blob and MFG Binaries.
 
 Instructions
 ------------
-The WiFi driver is developed based on Linux v6.1.145. Older kernels need
+The Wi-Fi driver is developed based on Linux v6.1.145. Older kernels need
 use backports package. Below are examples of how to use this package
 with an older kernel or linux-stable v6.1.145.
 
 ### Using backports with an older kernel (v4.14+)
 
-Linux kernel image and WiFi driver modules need to be built separately.
+Linux kernel image and Wi-Fi driver modules need to be built separately.
 Below is the example of using with iMX Linux v4.14.78:
 
 #### Build the kernel image
@@ -70,7 +70,7 @@ Below is the example of using with iMX Linux v4.14.78:
    arch/arm/boot/zImage
 ```
 
-#### Build the WiFi driver/backports modules
+#### Build the Wi-Fi driver/backports modules
 ```bash
 #1. Untar the Cypress backports package
     tar zxvf cypress-backports-*.tar.gz
@@ -106,7 +106,7 @@ Note: If your board's dtb is not available in the cypress devicetree
     make ARCH=arm <devicetree name>.dtb
 ```
 
-#### Load the cypress wifi driver
+#### Load the cypress Wi-Fi driver
 ```bash
 #1. Copy your boards's zImage and dtb files to the target board
     bash
@@ -165,7 +165,7 @@ Note: More on fmac driver [firmware/nvram install](https://wireless.wiki.kernel.
 
 Instructions - Hostap
 ---------------------
-Hostpad/wpa_supplicant is the standard application for controlling WiFi devices.
+Hostpad/wpa_supplicant is the standard application for controlling Wi-Fi devices.
 Below is an example of cloning the Infineon GitHub repo and building
 hostapd/wpa_supplicant binaries.
 

@@ -3,11 +3,11 @@ Infineon WiFi Linux WiFi Solution - Release Notes
 
 Release Version
 ---------------
-v6.1.145-2026_0108
+v6.1.145-2026_0407
 
 Release Date
 ------------
-2026-01-08
+2026-04-07
 
 Wi-Fi Driver Change List
 ----------------------
@@ -366,6 +366,7 @@ Wi-Fi Driver Change List
  * 0353-brcmfmac-fix-hang-issue-after-bus_reset.patch
  * 0354-brcmfmac-Fix-missing-NULL-pointer-check.patch
  * 0355-non-upstream-fix-channel-issues-caused-by-iw-reg-set.patch  [x]
+ * 0356-non-upstream-add-bus_tuning-controls-for-SDIO-CRC-11.patch  [x]
 
         [-] means under upstream review
         [x] means no plan to upstream
